@@ -1,0 +1,56 @@
+## Task 0
+* Time complexity: O(1)
+
+Get first and last data from list, list length has no influence.
+
+* Space complexity: O(1)
+
+## Task 1
+* Time complexity: O( m + n )
+
+Iterate lists texts and calls seperately, m and n are the length of lists.
+Total time complexity O(m + n) 
+
+* Space complexity: O( m + n )
+
+Phone numbers are stored in set. Worst case is that every phone is unique.
+
+## Task 2
+* Time complexity: O(n)
+
+Iterate input, n is the length of list.
+
+*  Space complexity: O(n)
+
+Phone numbers and correspond last time are stored in a dictionary. Worst case is that every phone is unique.
+
+## Task 3
+* Time complexity: O( n log n )
+
+At first, iterate lists calls and save phone numbers we want, that needs O (n): n is the length of list calls
+Second, sort the selected phone numbers, that takes O( n log n)
+Third, iterate the selected phone numbers, that takes O(n)
+Total time complexity O(2n + n log n) -> O( n log n)
+
+*  Space complexity: O( n )
+
+numbers in call are selected and stored in set, worst case we need all of them -> O(n)
+transfer set to list -> O(n)
+Total space complexity O(2n) - > O(n)
+
+## Task 4
+* Time complexity: O( n log n )
+
+First, iterate calls and texts, and stored data in sets -> O(m + n): m and n are the length of lists
+Second, transfer set to list and sort the list -> O(n log n): 
+in case all the numbers making in list calls not appeared in list texts and received 0 phone calls. 
+Third, iterate the list O( n)
+Total time complexity O( m + 2n + n log n) -> O( n log n)
+
+*  Space complexity: O( m + n )
+
+store numbers in texts in a set, worst case we need all of them -> O(2m)  
+store numbers in calls in a set, worst case we need all of them -> O(2n)
+
+worst case all the numbers makeing phone calls in list calls are needed, O(n)
+Total space complexity O(2m + 3n) - > O(m + n)
